@@ -1,5 +1,5 @@
 # Lab5_Teoría de Lenguajes  
-**Autores:** Oswald David Gutiérrez & Jhomar Farid Arrieta  
+**Autores:** Oswald David Gutiérrez & Jhomar Farid Arrieta Montes 
 [Repositorio en GitHub](https://github.com/OswaldGutierrez/Lab5_TDeLenguajes.git)  
 
 ---
@@ -60,45 +60,4 @@ La implementación de un autómata de pila en Python junto con su simulación gr
 
 La interfaz gráfica facilita el seguimiento visual de cada transición y operación sobre la pila, demostrando ser una herramienta didáctica valiosa para detectar errores en la lógica de aceptación o rechazo.  
 
-Gracias a esta práctica, se reforzó la importancia de un diseño correcto de las transiciones y del análisis exhaustivo de casos particulares. Este proyecto contribuyó al desarrollo de habilidades prácticas en el modelado de autómatas y fortaleció la comprensión teórica de los lenguajes formales.  
-
----
-
-## Código Principal (Fragmentos)
-
-```python
-# automataPila.py (fragmento)
-from collections import deque
-
-class AutomataPila:
-    def __init__(self):
-        self.pila = deque()
-        self.estado = 'q0'
-        self.simboloInicialPila = 'Z'
-        self.pila.append(self.simboloInicialPila)
-        self.wPila = deque()
-    # Resto de la implementación...
-
-# animarAutomata.py (fragmento)
-import matplotlib.pyplot as plt
-import networkx as nx
-
-class AnimadorAutomata:
-    def __init__(self, transiciones, n, m):
-        self.transiciones = transiciones
-        self.n = n
-        self.m = m
-        self.estados = ['q0', 'q1', 'q2', 'q3']
-        self.grafo = nx.DiGraph()
-        # Construcción del grafo y simulación...
-
-# main.py (fragmento)
-from automataPila import AutomataPila
-from animarAutomata import AnimadorAutomata
-
-cadena = input("Cadena: ")
-automata = AutomataPila()
-resultado = automata.procesarCadena(cadena)
-
-print("Cadena aceptada" if resultado else "Cadena rechazada")
-animador = AnimadorAutomata(automata.transiciones, automata.n, automata.m)
+Gracias a esta práctica, se reforzó la importancia de un diseño correcto de las transiciones y del análisis exhaustivo de casos particulares. Este proyecto contribuyó al desarrollo de habilidades prácticas en el modelado de autóm
